@@ -74,11 +74,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
-  var sumArr = [2,3,4];
-  var messageArr = testArray + ' was passed in as an array of numbers, and ' + sumArr + 'is their sum.';
-  return [sumArr, messageArr];
+function sumArray(sumArr){ //eslint-disable-line
+  var theSum = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+  var message = sumArr + ' was passed in as an array of numbers, and ' + theSum + ' is their sum' + '.';
+  return [theSum, message];
 }
 
 
@@ -97,7 +96,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
